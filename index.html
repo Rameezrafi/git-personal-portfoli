@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    body{
+        background-color:;
+    }
+    .navbar{
+        background-color:darkgray;
+
+    }
+    .nav-link{
+        color:black;
+        text-decoration: none;
+        width: 60%;
+        margin-top: 3px;
+        justify-content: space-between;
+        font-size: 100%;
+        font-weight: 700;
+        font-style: italic;
+        position: sticky;
+        
+    }
+    .nav-link:hover{
+        color: white;
+    }
+    .btn1{
+        background-color: black;
+        color:ghostwhite;
+        border: 2px solid honeydew;
+        border-radius: 20px;
+        width: 100%;
+        justify-content: center;
+        margin-top: 3px;
+        margin-left: 90px;
+        font-weight: 700;
+        padding: 3%;
+        font-style: italic;
+    }
+    section{
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+        background-color:white;
+    }
+    .home{
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        position: relative;
+        width:80%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home-content h1{
+        font-size: 80px;
+        font-weight: 800;
+    }
+    .h2{
+        font-size: 80px;
+        font-weight: 600;
+    }
+    .h2 span{
+        color: coral;
+    }
+    .home-content h3{
+        font-size: 27px;
+        font-weight: 700;
+        font-style:initial;
+    }
+    .home-content h3 span{
+        color: crimson;
+        font-weight: bold;
+    }
+    .btn2{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 40px;
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        font-style: italic;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        margin: 25px;
+    }
+    .btn2:hover{
+        background-color: white;
+        color: black;
+    }
+    .wrapper{
+        display: flex;
+        position: relative;
+    }
+    
+    .home-sci a:hover{
+        background-color: white;
+        color: black;
+    }
+    .h4{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin-left: 37%;
+        font-style: italic;
+        font-weight: 600;
+    }
+    .p1{
+      padding: 10px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+      font-style:italic;
+      background-color: darkgrey;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .h5{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin-left: 45%;
+        font-style: italic;
+        font-weight: 600;
+    }
+    .h6{
+        margin: 5px;
+        color: white;
+    }
+    .skills{
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color:black;
+        padding: 20px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .progress{
+        background-color:gray;
+        justify-content: flex-start;
+        border-radius: 50px;
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 20px;
+        width: 100%;
+    }
+    .pro-value1{
+        animation: load1 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+
+    .progress p{
+        color: white;
+        padding: 12px;
+    }
+    .pro-value2{
+        animation: load2 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+    .pro-value3{
+        animation: load3 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+    .pro-value4{
+        animation: load4 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+    .pro-value5{
+        animation: load5 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+    .pro-value6{
+        animation: load6 3s normal forwards;
+        border-radius: 50px;
+        background-color: black;
+        height: 40px;
+        width: 0;
+    }
+    .h7{
+       justify-content: center; 
+       align-items: center;
+       margin-left: 45%;
+       margin-top: 4%;
+       margin-bottom: 3%;
+       font-weight: 600;
+       font-style: italic;
+    }
+    .card{
+        margin-left: 3%;
+        background-color: darkgrey;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .card-title{
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+        font-weight: 700;
+        font-style: italic;
+        color:black;
+    }
+    .card-img-top{
+        width: 100%;
+        margin-top: 5%;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .card-text{
+        font-weight: 400;
+        font-style: italic;
+        color: black;
+    }
+    .btn3{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 40px;
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        font-style: italic;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        margin: 25px;
+    }
+    .btn3:hover{
+        background-color: white;
+        color: black;
+    }
+    .contact{
+        width: 100%;
+        padding: 45px;
+        border-radius: 0;
+        position: relative;
+    }
+    .row{
+        background-color: black;
+        color: white;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+    }
+    .col-md-7{
+        padding: 20px;
+    }
+    .col-md-5{
+        background-color:darkgrey;
+        padding: 20px;
+        color:black;
+    }
+    .btn4{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 40px;
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        font-style: italic;
+        font-size: 14px;
+        color:white;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        margin: 25px;
+    }
+    .btn4:hover{
+        background-color: white;
+        color: black;
+    }
+    .icon a{
+        position: relative;
+        justify-content: space-between;
+        width: 100px;
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+    }
+    .icon a:hover{
+        color: white;
+    }
+     @keyframes load1{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 91%;
+        }
+    } 
+    @keyframes load2{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 70%;
+        }
+    } 
+    @keyframes load3{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 64%;
+        }
+    } 
+    @keyframes load4{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 15%;
+        }
+    } 
+    @keyframes load5{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 50%;
+        }
+    }
+    @keyframes load6{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 50%;
+        }
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="position: sticky;">
+        <div class="container w-75 ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav container w-25 me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Skills</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Project</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a> -->
+        <!-- <li class="nav-item">
+        <a href="#"><button type="button" class="btn1 btn-dark">Resume</button></a> -->
+        </li>
+        </ul>
+        </div>
+        </div>
+        </nav>
+    </header> 
+     <section class="home" id="home">
+         <div class="home-content">
+            <div class="container w-75">
+            <h1 class="h1">Hi There,</h1>
+            <h1 class="h2">I'm <span>Rameez</span></h1>
+        <div class="text-animate">
+            <h3>I Am Into <span>Web Developer</span></h3>
+            </div>
+        <div>
+            <a href="#"><button type="button" class="btn2 btn-dark">Download CV</button></a>
+            </div>
+         </div>
+        </div>
+        </div>
+     </section>
+         <div class="about" id="about">
+            <div class="container w-75 about-content">
+                <h1 class="h4">About Me.</h1>
+                <p class="p1">"Hello, I'm Rameez, a passionate and driven Mean Stack Developer.
+                    I possess a solid understanding of front-end technologies such as HTML, CSS, and JavaScript, coupled with expertise in back-end development using Node.js and Express.js. Moreover, I am proficient in working with NoSQL databases like MongoDB and have hands-on experience in building RESTful APIs. <br>
+                    Thank you for taking the time to review my profile. I am eager to explore opportunities where I can contribute my skills and make a meaningful impact. Please feel free to reach out to me through the contact information provided to discuss potential collaborations or opportunities.
+                    </p>
+            <div class="skills" id="skills">
+            <div class="skills-content">
+               <h1 class="h5">skills</h1>
+                  <div class="progress">
+                     <div class="pro-value1">
+                        <p>HTML <span text-white float-right></span></p>
+                     </div>
+                  </div> 
+                  <div class="progress my-3">
+                     <div class="pro-value2">
+                        <p>CSS <span text-white float-right></span></p>
+                     </div>
+                  </div> 
+                 <div class="progress">
+                     <div class="pro-value3">
+                        <p>BOOTSTRAP <span  text-white float-right></span></p>
+                     </div>
+                  </div> 
+                 <div class="progress my-3">
+                     <div class="pro-value4">
+                        <p>JAVASCRIPT <span text-white float-right></span></p>
+                     </div>
+                  </div>
+                 <div class="progress my-3">
+                     <div class="pro-value5">
+                        <p>WEB_DESIGN <span text-white float-right></span></p>
+                     </div>
+                  </div>
+                 <div class="progress my-3">
+                     <div class="pro-value6">
+                        <p>WEB_DEVELOPING <span text-white float-right></span></p>
+                     </div>
+                  </div>       
+               </div>
+               </div>
+                </div>
+         </div>
+         
+            </div>
+         </div>
+         <div class="project" id="project">
+            <div class="project-content">
+                <h1 class="h7">Project</h1>
+            <div class="container w-75">
+
+            <div class="row">
+           <div class="card" style="width: 18rem;">
+           <img src="./image/new2.png" class="card-img-top" alt="...">
+           <div class="card-body">
+           <h8 class="card-title">Calculator</h8>
+           <p class="card-text">The Basic Calculator project is a simple application that performs arithmetic calculations on two numbers. It provides a user-friendly interface for users to input numbers and select the operation they want to perform. The calculator supports basic arithmetic operations such as addition, subtraction, multiplication, and division.</p>
+           <a href="#" class="btn3 btn-primary">View Detail</a>
+         </div>
+         </div>
+           <div class="card" style="width: 18rem;">
+           <img src="./image/new 1.png" class="card-img-top" alt="...">
+           <div class="card-body">
+           <h8 class="card-title">Food web</h8>
+           <p class="card-text">This is a food website for the Tasty Bites of MidNight traven, we believe that food is not just sustenance; it's an experience that delights the senses and brings people together. Whether you're a seasoned foodie or a curious novice, our small food web project is here to satisfy your cravings for delicious content.</p>
+           <a href="#" class="btn3 btn-primary">View Detail</a>
+         </div>
+         </div>
+           <div class="card" style="width: 18rem;">
+           <img src="./image/new4.png" class="card-img-top" alt="...">
+           <div class="card-body">
+           <h8 class="card-title">Luminar</h8>
+           <p class="card-text">This is a Luminar Technolab website sample work.This is a small-scale software project designed to assist a software training institute in Kerala in managing its daily operations efficiently. The system aims to streamline administrative tasks, facilitate course management, and provide a user-friendly interface for students and staff.</p>
+           <a href="#" class="btn3 btn-primary">View Detail</a>
+         </div>
+         </div>
+         <!-- <div class="card" style="width: 18rem;">
+           <img src="./image/new3.png" class="card-img-top" alt="...">
+           <div class="card-body">
+           <h8 class="card-title">Books Review</h8>
+           <p class="card-text">The "Book Review Gallery" is a simple CSS project that showcases a gallery of book reviews with visually appealing styles and layouts. The project aims to create an attractive and responsive web page where users can read book reviews presented in a visually engaging manner and implement pagination or infinite scroll to handle a large number.</p>
+           <a href="#" class="btn3 btn-primary">View Detail</a>
+         </div>
+         </div> -->
+         </div>
+         </div>
+         </div>
+         </div>
+         <div class="contact" id="contact">
+            <div class="container w-75">
+            <div class="row">
+                
+                <div class="col-md-7">
+                    
+                    <h4 class="h8">Get in touch</h4>
+                   <div class="mb-3">
+                   <label for="exampleFormcontrolInput1" class="form-label">Name</label>
+                   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your name">
+                   </div>
+                   <div class="mb-3">
+                   <label for="exampleFormcontrolInput1" class="form-label">Email</label>
+                   <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your email">
+                   </div>
+                   <div class="mb-3">
+                   <label for="exampleFormcontrolInput1" class="form-label">Contact Number</label>
+                   <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your number">
+                   </div>
+                   <div class="mb-3">
+                   <label for="exampleFormcontrolTextarea1" class="form-label">Message</label>
+                   <textarea  class="form-control" id="exampleInputTextarea1" row="3"></textarea>
+                   </div>
+                   
+                
+                </div>
+                <div class="col-md-5">
+                    <h4 class="h8">Contact us</h4><hr>
+                    <div class="mt-5">
+                     <div class="d-flex">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <p>Address: Riya-Remi manzil,Palakkad,Kerala</p>
+                     </div><hr>
+                     <div class="d-flex">
+                        <i class="bi bi-telephone-fill"></i>
+                        <p>Contact:- 7034064587</p>
+                     </div><hr>
+                     <div class="d-flex">
+                        <i class="bi bi-envelope-fill"></i>
+                        <p>Email:- rameez1642000@gmail.com</p>
+                     </div><hr>
+                     <div class="d-flex">
+                        <div class="icon">
+                  <ul>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a> 
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>                       
+                  </ul>
+                  </div>
+                     </div>
+                     <button class="btn4 btn-primary">send</button>
+                    </div>
+                   </div> 
+                </div>
+            </div>
+         </div>
+</body>
+</html>
